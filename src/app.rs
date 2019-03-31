@@ -8,6 +8,7 @@ pub fn build() -> App<'static, 'static> {
         .arg(
             Arg::with_name("all")
                 .short("a")
+                .overrides_with("almost-all")
                 .long("all")
                 .overrides_with("display_almost_all")
                 .multiple(true)
@@ -16,6 +17,7 @@ pub fn build() -> App<'static, 'static> {
         .arg(
             Arg::with_name("almost-all")
                 .short("A")
+                .overrides_with("all")
                 .long("almost-all")
                 .overrides_with("display_all")
                 .multiple(true)
